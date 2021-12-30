@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Jquey</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        #box{
+            border: 2px solid seagreen;
+            background-color:rgb(143, 188, 177);
+            font-size: 30px;
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amit Kumar Lamba : JQUERY Mouse Event</h1>
+    <div id="box" class="test">
+        <h2>Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique pariatur laudantium quas consectetur aliquam quidem, quod iusto saepe amet fuga.</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#box').click(function(){
+                $('#box').css('backgroundColor','Blue')
+                $('h2').css("fontSize","100px")
+                $("box").css('font-family',' Arial, Helvetica, sans-serif')
+                var a=$('#box').text()
+                console.log(a)
+            });
+
+            $('#box').dblclick(function(){
+                $('#box').css('backgroundColor',"rosybrown")
+            });
+
+            $('#box').mouseleave(function(){
+                $('#box').css('padding','50px')
+            });
+
+            $('#box').mouseenter(function(){
+                $('#box').css('margin','100px')
+            });
+
+            $('#box').contextmenu(function(){
+                $('#box').css('fontFamily',"'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif")
+                $('#box').css('fontSize','30px')
+                $('#box').css('margin','auto')
+                $('#box').css('padding','20px')
+                $('#box').css('color','gray')
+                });
+
+
+        })
+    </script>
+</body>
+</html>
