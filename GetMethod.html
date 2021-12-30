@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .one{
+            margin-top: 200px;
+            margin-left: 500px;
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+            padding-left: 200px;
+            padding-top: 200px;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <form  id="submit"action="">
+                <label for="Name">Name</label>
+                <input type="text" id="name"><br>
+                <label for="Course">Course</label>
+                <input type="text" id="Course"><br>
+                <label for="">Country</label>
+                <select  id="select">
+                    <option value="India">India</option>
+                    <option value="Austraila">Austraila</option>
+                    <option value="New Zeland">New Zeland</option>
+                    <option value="France">France</option>
+                    <option value="America">America</option>
+                </select><br>
+                <button  type="submit"  id="btn">Sumbit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#submit').submit(function(){
+                var name=$('#name').val()
+                var Course=$('#Course').val()
+                var Country=$('#select').val()
+                if(name=="Amit Kumar" && Course=="BCA" && Country=="India"){
+                alert("Login Successful" + " "+
+                    "name=" + name  + " " + " Course ="+ Course + " " +"Country = " + Country )}
+                else{
+                    alert("Login Unsuccessful")
+                }
+            })
+        })
+    </script>
+    
+</body>
+</html>
